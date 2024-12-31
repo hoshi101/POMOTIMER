@@ -11,6 +11,12 @@ const break_time = 0.5 * 60;
 let timerID = null;
 let one_round_completed = false; // One round complete = work_time + break_time
 
+
+const update_title = (msg) =>{
+
+}
+
+
 const count_down = (time) => {
     return() => {
             timer.textContent = time;
@@ -20,6 +26,12 @@ const count_down = (time) => {
                 if(!one_round_completed){
                     timeID = start_timer(break_time);
                     one_round_completed = true;
+                    update_title("Time to break!");
+                }
+                else{
+                update_title("!! Completed !!");
+                setTimeout
+                update_title
                 }
             }
     }
@@ -38,4 +50,5 @@ const stop_timer = () => {
 
 start_button.addEventListener('click', ()=>{
     timerID = start_timer(work_time);
+    update_title("Time to work!");
 })
